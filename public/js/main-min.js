@@ -55,16 +55,28 @@ $(document).ready(function() {
 
 function enviarFormulario() {
     var formData = {
-        nombreCompleto: document.querySelector('input[name="fullname"]').value,
-        dni: document.querySelector('input[name="dni"]').value,
-        celular: document.querySelector('input[name="celular"]').value,
-        ubicacion: document.querySelector('input[name="ubicacion"]').value,
-        correo: document.querySelector('input[name="correo"]').value,
-        tipoSolicitud: document.querySelector('#selectTipo').value
+        nIdPortal: 1,
+        sPortal: "SAUCES",
+        sURL: "https://www.sauces.com.pe",
+        sNombreCompleto: document.querySelector('input[name="fullname"]').value,
+        sDNI: document.querySelector('input[name="dni"]').value,
+        sCelular: document.querySelector('input[name="celular"]').value,
+        sUbicacion: document.querySelector('input[name="ubicacion"]').value,
+        sCorreo: document.querySelector('input[name="correo"]').value,
+        nIdTipoSolicitud: parseInt(document.querySelector('#selectTipo').value),
+        sTipoSolicitud: $('#selectTipo option:selected').text()
     };
-
-    // Validación básica
-    if (!formData.nombreCompleto || !formData.dni || !formData.celular || !formData.ubicacion || !formData.correo || formData.tipoSolicitud === "Tipo de solicitud") {
+    if (
+        !formData.nIdPortal
+        || !formData.sPortal
+        || !formData.sURL
+        || !formData.sNombreCompleto
+        || !formData.sDNI
+        || !formData.sCelular
+        || !formData.sUbicacion
+        || !formData.sCorreo
+        || !formData.nIdTipoSolicitud
+    ) {
         Swal.fire({
             title: 'Error!',
             text: 'Por favor, completa todos los campos',
@@ -73,27 +85,29 @@ function enviarFormulario() {
         });
         return;
     }else{
-        // var xhr = new XMLHttpRequest();
-        // xhr.open("POST", "/api/form", true);
-        // xhr.setRequestHeader("Content-Type", "application/json");
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://localhost:5001/api/FormularioContacto/InsFormularioContactoPortal", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
 
-        // xhr.onreadystatechange = function () {
-        //     if (xhr.readyState === 4 && xhr.status === 200) {
-        //         // Manejar la respuesta del servidor si es necesario
-        //         console.log(xhr.responseText);
-        //     }
-        // };
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                // Manejar la respuesta del servidor si es necesario
+                Swal.fire({
+                    title: 'Enviado!',
+                    text: 'Los datos fueron enviados correctamente...',
+                    icon: 'success',
+                    confirmButtonText: 'Cerrar'
+                });
+                setTimeout(function () {
+                    location.reload();
+                }, 2000);
 
-        // xhr.send(JSON.stringify(formData));
-        Swal.fire({
-            title: 'Enviado!',
-            text: 'Los datos fueron enviados correctamente...',
-            icon: 'success',
-            confirmButtonText: 'Cerrar'
-        });
-        setTimeout(function () {
-            location.reload();
-        }, 2000);
+                console.log(xhr.responseText);
+            }
+        };
+
+        xhr.send(JSON.stringify(formData));
+        
         
     }
 

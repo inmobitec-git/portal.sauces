@@ -366,4 +366,7 @@ ul{
     .btnSend{
         max-width: 100%;
     }
+    .listNetWorks{
+        right: 20px;
+    }
 }

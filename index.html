@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="./plugins/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./plugins/owlcarousel/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="./plugins/owlcarousel/dist/assets/owl.theme.default.min.css">
+    <link href="./plugins/light-gallery/dist/css/lightgallery.css" rel="stylesheet">
+        
+
     <link rel="stylesheet" href="./public/css/main-min.css">
 </head>
 <body>
-    <div class="shape"><img src="./public/img/shapes/shapePage.png" alt="" width="100%"></div>
+    
     <section class="sectNavbar">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary navbarMain">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary navbarMain"> 
             <div class="container-fluid">
                 <!-- <a class="navbar-brand" href="#">Navbar</a> -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,9 +25,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 listNavbar">
                         <li class="nav-item"><a class="nav-link active btnOurProject" aria-current="page" href="#">Nuestros proyectos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Adquiere tu lote</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contáctanos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Ubícanos</a></li>                    
+                        <li class="nav-item"><a class="nav-link" href="#footer">Contáctanos</a></li>                 
                     </ul>
                 </div>
             </div>
@@ -32,6 +33,7 @@
     </section>
 
     <section class="sectSlider">
+        <div class="shape"><img src="./public/img/shapes/shapePage.png" alt="" width="100%"></div>
         <img src="./public/img/slider/slider-sauces.png" alt="" width="100%">
     </section>
 
@@ -88,26 +90,48 @@
         </div>
     </section>
 
+
     <section class="sectProgress">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
                     
-                    <div class="owl-carousel progresspage owl-theme">
+                    <div class="owl-carousel progresspage owl-theme"  id="gallery-multimedia">
                         <div class="item">
-                            <img src="./public/img/progress/progress1.png" alt="">
+                            <a href="./public/img/progress/a.jpg"><img src="./public/img/progress/thumb/a-min.png" alt=""></a>
                         </div>
                         <div class="item">
-                            <img src="./public/img/progress/progress2.png" alt="">
+                            <a href="./public/img/progress/b.jpg"><img src="./public/img/progress/thumb/b-min.png" alt=""></a>
                         </div>
                         <div class="item">
-                            <img src="./public/img/progress/progress3.png" alt="">
+                            <a href="./public/img/progress/c.jpg"><img src="./public/img/progress/thumb/c-min.png" alt=""></a>
                         </div>
                         <div class="item">
-                            <img src="./public/img/progress/progress4.png" alt="">
+                            <a href="./public/img/progress/d.jpg"><img src="./public/img/progress/thumb/d-min.png" alt=""></a>
                         </div>
                         <div class="item">
-                            <img src="./public/img/progress/progress1.png" alt="">
+                            <a href="./public/img/progress/e.jpg"><img src="./public/img/progress/thumb/e-min.png" alt=""></a>
+                        </div>
+                        <div class="item">
+                            <a href="./public/img/progress/f.jpg"><img src="./public/img/progress/thumb/f-min.png" alt=""></a>
+                        </div>
+                        <div class="item">
+                            <a href="./public/img/progress/g.jpg"><img src="./public/img/progress/thumb/g-min.png" alt=""></a>
+                        </div>
+                        <div class="item">
+                            <a href="./public/img/progress/h.jpg"><img src="./public/img/progress/thumb/h-min.png" alt=""></a>
+                        </div>
+                        <div class="item">
+                            <a href="./public/img/progress/i.jpg"><img src="./public/img/progress/thumb/i-min.png" alt=""></a>
+                        </div>
+                        <div class="item">
+                            <a href="./public/img/progress/j.jpg"><img src="./public/img/progress/thumb/j-min.png" alt=""></a>
+                        </div>
+                        <div class="item">
+                            <a href="./public/img/progress/k.jpg"><img src="./public/img/progress/thumb/k-min.png" alt=""></a>
+                        </div>
+                        <div class="item">
+                            <a href="./public/img/progress/l.jpg"><img src="./public/img/progress/thumb/l-min.png" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -194,18 +218,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h3>Proximamente...</h3>
+                    <h3>Próximamente...</h3>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="sectSoon">
-        <img src="./public/img/gifs/gif1.png" alt="" width="100%">
+        <img src="./public/gifs/garde.gif" alt="" width="100%">
     </section>
 
 
-    <section class="sectFooter">
+    <section class="sectFooter" id="footer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5">
@@ -231,37 +255,37 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="inputForm">
-                                        <input type="text" placeholder="Nombre completo">
+                                        <input type="text" placeholder="Nombre completo" name="fullname">
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6">
                                     <div class="inputForm">
-                                        <input type="text" placeholder="DNI"">
+                                        <input type="text" placeholder="DNI" name="dni">
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6">
                                     <div class="inputForm">
-                                        <input type="text" placeholder="Celular">
+                                        <input type="text" placeholder="Celular" name="celular">
                                     </div>
                                 </div>
 
                                 <div class="col-lg-12">
                                     <div class="inputForm">
-                                        <input type="text" placeholder="Ubicación">
+                                        <input type="text" placeholder="Ubicación" name="ubicacion">
                                     </div>
                                 </div>
 
                                 <div class="col-lg-12">
                                     <div class="inputForm">
-                                        <input type="text" placeholder="Correo">
+                                        <input type="text" placeholder="Correo" name="correo">
                                     </div>
                                 </div>
 
                                 <div class="col-lg-12">
                                     <div class="inputForm">
-                                        <select class="form-select" aria-label="Default select example">
+                                        <select class="form-select" aria-label="Default select example" id="selectTipo" required>
                                             <option selected>Tipo de solicitud</option>
                                             <option value="1">Necesito información</option>
                                             <option value="2">Soy Socio</option>
@@ -275,7 +299,7 @@
                                 </div>
 
                                 <div class="col-lg-12">
-                                    <button class="btnSend">Enviar formulario</button>
+                                    <button type="button" class="btnSend" onclick="enviarFormulario()">Enviar formulario</button>
                                 </div>
 
 
@@ -290,12 +314,10 @@
                 <div class="col-lg-5">
                     <div class="boxLinks">
                         <ul>
-                            <li><a href="javascript:void(0)">Conócenos</a></li>
-                            <li><a href="javascript:void(0)">Proyectos</a></li>
-                            <li><a href="javascript:void(0)">Contáctanos</a></li>
-                            <li><a href="javascript:void(0)">Aliados</a></li>
-                            <li><a href="javascript:void(0)">Mi portal</a></li>
-                            <li><a href="javascript:void(0)">Manual de Mi Portal</a></li>
+                            <li><a href="#footer">Contáctanos</a></li>
+                            <!-- <li><a href="javascript:void(0)">Aliados</a></li> -->
+                            <!-- <li><a href="javascript:void(0)">Mi portal</a></li> -->
+                            <li><a href="javascript:void(0)">Mi Portal</a></li>
                             <li><a href="javascript:void(0)">Libro de reclamanciones</a></li>
                         </ul>
                     </div>
@@ -329,6 +351,14 @@
     <script src="./plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="./plugins/owlcarousel/dist/owl.carousel.min.js"></script>
     <script src="./plugins/font-awesome/font-awesome-5-min.js"></script>
+
+
+    <script src="./plugins/light-gallery/dist/js/lightgallery-all.js"></script>
+    <script src="./plugins/light-gallery/modules/lg-thumbnail.min.js"></script>
+    <script src="./plugins/light-gallery/modules/lg-fullscreen.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
     <script src="./public/js/main-min.js"></script>
 </body>

@@ -52,6 +52,12 @@ ul{
 }
 /****** NAVBAR ******/
 
+/****** SLIDER ******/
+.sectSlider{
+    position: relative;
+}
+/****** SLIDER ******/
+
 /***** ABOUT US *****/
 .sectAboutUs{
     margin-top: -100px;
@@ -160,6 +166,7 @@ ul{
     padding: 100px 0;
     background: #17171D;
     z-index: 1;
+    overflow: hidden;
 }
 .sectFooter:before{
     content: "";
@@ -334,4 +341,32 @@ ul{
 .listNetWorks li>a:hover{
     background: #1E8DEE;
     transition: all ease .3s;
+}
+/*****/
+@media(max-width: 991px){
+    .sectNavbar {
+        height: 56px;
+    }
+    .sectAboutUs {
+        margin-top: 0px;
+    }
+    .sectMap .boxMap>ul {
+        position: relative;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+}
+@media(max-width: 767px){
+    .boxContactWithUs .boxHead h3 {
+        font-size: 35px;
+    }
+    .boxContactWithUs .boxBody .textContact h5 {
+        font-size: 25px;
+    }
+    .btnSend{
+        max-width: 100%;
+    }
+    .listNetWorks{
+        right: 20px;
+    }
 }

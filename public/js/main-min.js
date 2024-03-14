@@ -100,9 +100,7 @@ function enviarFormulario() {
                 });
                 setTimeout(function () {
                     location.reload();
-                }, 2000);
-
-                console.log(xhr.responseText);
+                }, 1500);
             }
         };
 

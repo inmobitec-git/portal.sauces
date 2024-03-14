@@ -85,6 +85,8 @@ function enviarFormulario() {
         });
         return;
     }else{
+        $.blockUI();
+        $.blockUI({ css: { backgroundColor: 'rgb(0 0 0 / 64%)', color: '#fff', padding: '15px', border: '0'}, message: '<h1>Cargando...</h1>' });
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "https://localhost:5001/api/FormularioContacto/InsFormularioContactoPortal", true);
         xhr.setRequestHeader("Content-Type", "application/json");
@@ -98,9 +100,17 @@ function enviarFormulario() {
                     icon: 'success',
                     confirmButtonText: 'Cerrar'
                 });
-                setTimeout(function () {
-                    location.reload();
-                }, 1500);
+                document.querySelector('input[name="fullname"]').value = "";
+                document.querySelector('input[name="dni"]').value = "";
+                document.querySelector('input[name="celular"]').value = "";
+                document.querySelector('input[name="ubicacion"]').value = "";
+                document.querySelector('input[name="correo"]').value = "";
+                document.querySelector('#selectTipo').value = "";
+                $('#selectTipo option:selected').val("");
+                $.unblockUI();
+                // setTimeout(function () {
+                //     location.reload();
+                // }, 1500);
             }
         };
 

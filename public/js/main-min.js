@@ -57,7 +57,7 @@ function enviarFormulario() {
     var formData = {
         nIdPortal: 1,
         sPortal: "SAUCES",
-        sURL: "https://www.sauces.com.pe",
+        sURL: "https://www.sauces.psviviendasdelsur.pe",
         sNombreCompleto: document.querySelector('input[name="fullname"]').value,
         sDNI: document.querySelector('input[name="dni"]').value,
         sCelular: document.querySelector('input[name="celular"]').value,
@@ -88,7 +88,7 @@ function enviarFormulario() {
         $.blockUI();
         $.blockUI({ css: { backgroundColor: 'rgb(0 0 0 / 64%)', color: '#fff', padding: '15px', border: '0'}, message: '<h1>Cargando...</h1>' });
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://localhost:5001/api/FormularioContacto/InsFormularioContactoPortal", true);
+        xhr.open("POST", "https://imbbe.inmobitec.pe/api/FormularioContacto/InsFormularioContactoPortal", true);
         xhr.setRequestHeader("Content-Type", "application/json");
 
         xhr.onreadystatechange = function () {

@@ -57,7 +57,7 @@ function enviarFormulario() {
     var formData = {
         nIdPortal: 1,
         sPortal: "SAUCES",
-        sURL: "https://www.sauces.psviviendasdelsur.pe",
+        sURL: "https://sauces.psviviendasdelsur.pe",
         sNombreCompleto: document.querySelector('input[name="fullname"]').value,
         sDNI: document.querySelector('input[name="dni"]').value,
         sCelular: document.querySelector('input[name="celular"]').value,

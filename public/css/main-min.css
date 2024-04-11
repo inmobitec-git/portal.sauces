@@ -104,6 +104,8 @@ ul{
 .sectTitle h3{
     color: #485C24;
     font-weight: 800;
+    text-align: center;
+    margin-bottom: 50px;
 }
 /****** TITLE *******/
 
@@ -288,16 +290,16 @@ ul{
 .boxLogoFooter img{
     display: block;
     max-width: 286px;
-    margin: 0 auto;
+    margin-left: auto;
 }
 .boxLogoFooter p{
-    text-align: center;
+    text-align: right;
     color: #FFFFFF;
-    font-size: 25px;
+    font-size: 20px;
     margin: 20px 0;
 }
 .boxLogoFooter>ul{
-    text-align: center;
+    text-align: right;
 }
 .boxLogoFooter>ul>li{
     display: inline-block;

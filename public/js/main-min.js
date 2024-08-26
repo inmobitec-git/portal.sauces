@@ -64,7 +64,8 @@ function enviarFormulario() {
         sUbicacion: document.querySelector('input[name="ubicacion"]').value,
         sCorreo: document.querySelector('input[name="correo"]').value,
         nIdTipoSolicitud: parseInt(document.querySelector('#selectTipo').value),
-        sTipoSolicitud: $('#selectTipo option:selected').text()
+        sTipoSolicitud: $('#selectTipo option:selected').text(),
+        nIdFormato: 18
     };
     if (
         !formData.nIdPortal
